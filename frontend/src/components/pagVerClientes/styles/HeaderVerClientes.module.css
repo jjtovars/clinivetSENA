@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    overflow: hidden; /*Esconde todo lo que se pueda desbordar de mi contenedor*/
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.1em;
+    padding: 40px 0;
+}
+
+.nav__logo{
+    width: 150px;
+}
+
+.nav__img{
+    width: 100%;
+    display: block; /*A las imagenes se le coloca display block para que quite un borde abajo que tienen las imagenes*/
+}
+
+.nav__input{
+    display: flex;
+    margin-left: auto;
+}
+
+.nav__input--busqueda{
+    width: 230px;
+    border: 2px solid #1c778b;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.nav__input--img{
+    margin-right: 40px;
+}
+
+
+.nav__link{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    color: #1c778b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}

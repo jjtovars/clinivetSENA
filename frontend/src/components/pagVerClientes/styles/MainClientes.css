@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container{
+    width: 90%;
+    overflow: hidden; /*Esconde todo lo que se pueda desbordar de mi contenedor*/
+    margin: 0 auto;
+  }
+  
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.1em;
+    padding: 40px 0;
+  }
+  
+  .nav__logo{
+    width: 150px;
+  }
+  
+  .nav__img{
+    width: 100%;
+    display: block; /*A las imagenes se le coloca display block para que quite un borde abajo que tienen las imagenes*/
+  }
+  
+  .nav__input{
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .nav__input--busqueda{
+    width: 230px;
+    border: 2px solid #1c778b;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .nav__input--img{
+    margin-right: 40px;
+  }
+  
+  
+  .nav__link{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    color: #1c778b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  
+  /************************************************  MAIN **************************************************/
+  
+  .container__table{
+    width: 100%;
+    margin: 50px auto 0;
+    border-collapse: collapse;
+  }
+  
+  
+  .celda{
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid #1c778b;
+    background-color: #fafafa;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  .celda__encabezado{
+    font-family: "Inter", sans-serif;
+    background-color: #1c778b;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  
+  .btn{
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 1px 6px;
+    text-decoration: none;
+  }
+  
+  .boton__edit{
+    border-color: #1c778b;
+    color: #1c778b;
+    margin-right: 10px;
+  }
+
+  
+  .boton__delete{
+    border-color: #8b1c1c;
+    color: #8b1c1c;
+  }

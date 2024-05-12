@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;;
+}
+
+.container__logo{
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.nav__img{
+    width: 160px;
+}
+
+.linea__header{
+    width: 350px;
+    height: 2px;
+    background-color: #1C778B;
+    margin: 15px auto 0;
+}
