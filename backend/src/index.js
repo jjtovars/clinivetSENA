@@ -13,7 +13,9 @@ app.get('/', (req,res) => {
     res.send('Hello Word')
 })
 
-const server = app.listen(10000, () => {
+const port = process.env.PORT || 10000;
+
+const server = app.listen(port, () => {
     console.log('Conexion exitosa con el servidor http://localhost:10000')
 })
 
