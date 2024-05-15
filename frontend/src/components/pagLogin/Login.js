@@ -19,7 +19,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:10000/api/clinivetsena/login', formData);
+            const response = await axios.post('https://clinivetsena.onrender.com/api/clinivetsena/login', formData);
             if (response.data.message === 'Autenticación satisfactoria') {
                 alert('Acceso exitoso');
                 window.location.href = '/menurecepcionistas';

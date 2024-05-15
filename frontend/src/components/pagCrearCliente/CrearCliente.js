@@ -23,7 +23,7 @@ const CrearCliente = () => {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:10000/api/clinivetsena/clientes', formData);
+            await axios.post('https://clinivetsena.onrender.com/api/clinivetsena/clientes', formData);
             alert('Cliente creado exitosamente!!!');
             window.location.href = '/clientes';
         } catch (error) {

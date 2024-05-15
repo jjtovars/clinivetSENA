@@ -20,7 +20,7 @@ const UpdateClientes = () => {
   useEffect(() => {
     const fetchCliente = async () => {
       try {
-        const response = await axios.get(`http://localhost:10000/api/clinivetsena/clientes/${id}`);
+        const response = await axios.get(`https://clinivetsena.onrender.com/api/clinivetsena/clientes/${id}`);
         setCliente(response.data);
       } catch (error) {
         console.error('Error al obtener cliente:', error);
