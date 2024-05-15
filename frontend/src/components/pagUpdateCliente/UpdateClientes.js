@@ -3,6 +3,7 @@ import styles from './style/UpdateClientes.module.css'; // Importa los estilos C
 import HeaderUpdate from './HeaderUpdate';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import config from '../../config';
 
 const UpdateClientes = () => {
   const { id } = useParams();
@@ -20,7 +21,7 @@ const UpdateClientes = () => {
   useEffect(() => {
     const fetchCliente = async () => {
       try {
-        const response = await axios.get(`https://clinivetsena.onrender.com/api/clinivetsena/clientes/${id}`);
+        const response = await axios.get(`${config.api.URL}/api/clinivetsena/clientes/${id}`);
         setCliente(response.data);
       } catch (error) {
         console.error('Error al obtener cliente:', error);
@@ -41,7 +42,7 @@ const UpdateClientes = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:10000/api/clinivetsena/clientes/${id}`, cliente);
+      await axios.put(`${config.api.URL}/api/clinivetsena/clientes/${id}`, cliente);
       // Mostrar alerta
       alert('Cliente guardado exitosamente');
       // Redirigir al usuario a la página de clientes después de la actualización

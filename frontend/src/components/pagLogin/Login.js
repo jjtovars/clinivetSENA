@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 import styles from './style/Login.module.css'; // Importa los estilos CSS como un objeto
 import HeaderLogin from './HeaderLogin';
+import config from '../../config';
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://clinivetsena.onrender.com/api/clinivetsena/login', formData);
+            const response = await axios.post(`${config.api.URL}/api/clinivetsena/login`, formData);
             if (response.data.message === 'Autenticación satisfactoria') {
                 alert('Acceso exitoso');
                 window.location.href = '/menurecepcionistas';

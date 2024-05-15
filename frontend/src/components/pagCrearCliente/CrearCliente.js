@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import HeaderCrearCliente from './HeaderCrearCliente';
 import axios from 'axios';
 import styles from './style/NewCliente.module.css'; // Importa los estilos CSS como un objeto
+import config from '../../config';
 
 const CrearCliente = () => {
     const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const CrearCliente = () => {
         e.preventDefault();
 
         try {
-            await axios.post('https://clinivetsena.onrender.com/api/clinivetsena/clientes', formData);
+            await axios.post(`${config.api.URL}/api/clinivetsena/clientes`, formData);
             alert('Cliente creado exitosamente!!!');
             window.location.href = '/clientes';
         } catch (error) {

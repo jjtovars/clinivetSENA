@@ -3,6 +3,8 @@ import axios from 'axios';
 import './styles/MainClientes.css'
 import Header from './Header';
 import { Link } from 'react-router-dom';
+import config from '../../config';
+
 
 
 const MainClientes = () => {
@@ -14,7 +16,7 @@ useEffect(() => {
 
 const fetchClientes = async () => {
   try {
-    const response = await axios.get('https://clinivetsena.onrender.com/api/clinivetsena/clientes');
+    const response = await axios.get(`${config.api.URL}/api/clinivetsena/clientes`);
     setClientes(response.data);
   } catch (error) {
     console.error('Error al obtener clientes:', error);
@@ -23,7 +25,7 @@ const fetchClientes = async () => {
 
 const handleDeleteCliente = async (id) => {
   try {
-    await axios.delete(`http://localhost:10000/api/clinivetsena/clientes/${id}`);
+    await axios.delete(`${config.api.URL}/api/clinivetsena/clientes/${id}`);
     // Después de eliminar el cliente, actualiza la lista de clientes
     fetchClientes();
   } catch (error) {
